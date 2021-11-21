@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".PaintActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="359dp"
+        android:layout_height="560dp"
+        android:id="@+id/constraintLayout2"
+        android:layout_marginEnd="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/linearLayout1">
+
+        <include layout="@layout/view_display"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:orientation="horizontal"
+        android:layout_width="360dp"
+        android:layout_height="82dp"
+
+        android:background="@drawable/tools_design"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginLeft="20dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:onClick="pencil"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/pen"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginLeft="15dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:onClick="eraser"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/erase"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginLeft="15dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:onClick="redColor"
+            android:backgroundTint="#ff0000"
+
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/button_design"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginLeft="15dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:onClick="yellowColor"
+            android:backgroundTint="#f1c40f"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/button_design"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginLeft="15dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:onClick="greenColor"
+            android:backgroundTint="#00ff00"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/button_design"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginLeft="20dp"
+            android:layout_width="35dp"
+            android:onClick="magentaColor"
+            android:layout_height="35dp"
+            android:backgroundTint="#ff00ff"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/button_design"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

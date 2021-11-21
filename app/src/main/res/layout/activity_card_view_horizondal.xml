@@ -1,0 +1,347 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F7FFFFFF"
+    android:gravity="center"
+    android:layout_marginBottom="80dp"
+    tools:context=".MainActivity">
+
+
+
+    <ScrollView
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+
+        android:background="#F7FFFFFF"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:title="Android phones"
+                tools:ignore="PrivateResource" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent">
+
+
+
+                <TextView
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SELECT PARTS"
+                    android:textColor="#000000"
+                    android:textAllCaps="true"
+                    android:textSize="20sp" />
+
+
+
+            </RelativeLayout>
+
+
+            <HorizontalScrollView
+                android:scrollbars="none"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:background="#F7FFFFFF"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="280dp"
+                        android:layout_height="200dp"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        app:cardCornerRadius="20dp"
+                        android:layout_margin="10dp"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/head_cardview"
+                        app:cardElevation="6dp">
+
+                        <RelativeLayout
+                            android:id="@+id/background_color"
+                            android:layout_width="280dp"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:padding="5dp">
+
+
+                            <ImageView
+                                android:id="@+id/part_image"
+                                android:layout_width="141dp"
+                                android:layout_height="252dp"
+                                android:src="@drawable/head" />
+
+                            <TextView
+                                android:id="@+id/part_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="-6dp"
+                                android:text="Head"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginBottom="80dp"
+                                android:textSize="25sp" />
+
+
+                        </RelativeLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="280dp"
+                        android:layout_height="200dp"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        app:cardCornerRadius="20dp"
+                        android:layout_margin="10dp"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/body_cardview"
+                        app:cardElevation="6dp">
+
+                        <RelativeLayout
+
+                            android:layout_width="280dp"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:padding="5dp">
+
+
+                            <ImageView
+
+                                android:layout_width="141dp"
+                                android:src="@drawable/body"
+                                android:layout_height="252dp" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="-6dp"
+                                android:text="Body"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginBottom="80dp"
+                                android:textSize="25sp" />
+
+
+                        </RelativeLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="280dp"
+                        android:layout_height="200dp"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        app:cardCornerRadius="20dp"
+                        android:layout_margin="10dp"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/left_arm_cardview"
+                        app:cardElevation="6dp">
+
+                        <RelativeLayout
+
+                            android:layout_width="280dp"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:padding="5dp">
+
+
+                            <ImageView
+
+                                android:layout_width="141dp"
+                                android:src="@drawable/left_a"
+                                android:layout_height="252dp" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="-6dp"
+                                android:text="Left Arm"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginBottom="80dp"
+                                android:textSize="25sp" />
+
+
+                        </RelativeLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="280dp"
+                        android:layout_height="200dp"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        app:cardCornerRadius="20dp"
+                        android:layout_margin="10dp"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/right_arm_cardview"
+                        app:cardElevation="6dp">
+
+                        <RelativeLayout
+
+                            android:layout_width="280dp"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:padding="5dp">
+
+
+                            <ImageView
+
+                                android:layout_width="141dp"
+                                android:src="@drawable/right_a"
+                                android:layout_height="252dp" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="-6dp"
+                                android:text="Right Arm"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginBottom="80dp"
+                                android:textSize="25sp" />
+
+
+                        </RelativeLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="280dp"
+                        android:layout_height="200dp"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        app:cardCornerRadius="20dp"
+                        android:layout_margin="10dp"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/left_leg_cardview"
+                        app:cardElevation="6dp">
+
+                        <RelativeLayout
+
+                            android:layout_width="280dp"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:padding="5dp">
+
+
+                            <ImageView
+
+                                android:layout_width="141dp"
+                                android:src="@drawable/left_l"
+                                android:layout_height="252dp" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="-6dp"
+                                android:text="Left Leg"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginBottom="80dp"
+                                android:textSize="25sp" />
+
+
+                        </RelativeLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="280dp"
+                        android:layout_height="200dp"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        app:cardCornerRadius="20dp"
+                        android:layout_margin="10dp"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/right_leg_cardview"
+                        app:cardElevation="6dp">
+
+                        <RelativeLayout
+
+                            android:layout_width="280dp"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:padding="5dp">
+
+
+                            <ImageView
+
+                                android:layout_width="141dp"
+                                android:src="@drawable/right_l"
+                                android:layout_height="252dp" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="-6dp"
+                                android:text="Right Leg"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginBottom="80dp"
+                                android:textSize="25sp" />
+
+
+                        </RelativeLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <Button
+                android:layout_marginTop="30dp"
+                android:text="CONTINUE"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
