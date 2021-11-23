@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.google.android.material.card.MaterialCardView;
 
@@ -15,6 +16,8 @@ public class DragView extends AppCompatActivity {
     DraggableCoordinatorLayout parentLayout;
     Button dragviewButton;
     MaterialCardView draggableCard1,draggableCard2,draggableCard3,draggableCard4,draggableCard5,draggableCard6;
+
+    ImageView bodyImg,headImg,leftlImg,rightlImg,leftaImg,rightaImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,39 @@ public class DragView extends AppCompatActivity {
         parentLayout.addDraggableChild(draggableCard4);
         parentLayout.addDraggableChild(draggableCard5);
         parentLayout.addDraggableChild(draggableCard6);
+
+        bodyImg =(ImageView)findViewById(R.id.bodyImg);
+        headImg =(ImageView)findViewById(R.id.headImg);
+        leftaImg =(ImageView)findViewById(R.id.leftaImg);
+        rightaImg =(ImageView)findViewById(R.id.rightaImg);
+        leftlImg =(ImageView)findViewById(R.id.leftlImg);
+        rightlImg =(ImageView)findViewById(R.id.rightlImg);
+
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            int resId = bundle.getInt("bodyId");
+            bodyImg.setImageResource(resId);
+        }if (bundle != null) {
+            int resId = bundle.getInt("headId");
+            headImg.setImageResource(resId);
+        }
+        if (bundle != null) {
+            int resId = bundle.getInt("leftaId");
+            leftaImg.setImageResource(resId);
+        }
+        if (bundle != null) {
+            int resId = bundle.getInt("rightaId");
+            rightaImg.setImageResource(resId);
+        }
+        if (bundle != null) {
+            int resId = bundle.getInt("leftlId");
+            leftlImg.setImageResource(resId);
+        }
+        if (bundle != null) {
+            int resId = bundle.getInt("rightlId");
+            rightlImg.setImageResource(resId);
+        }
+
 
         dragviewButton.setOnClickListener(new View.OnClickListener() {
             @Override

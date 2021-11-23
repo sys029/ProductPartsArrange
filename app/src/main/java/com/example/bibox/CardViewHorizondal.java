@@ -2,8 +2,10 @@ package com.example.bibox;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.card.MaterialCardView;
 
@@ -16,6 +18,8 @@ public class CardViewHorizondal extends AppCompatActivity {
     MaterialCardView leftLeg;
     MaterialCardView rightLeg;
 
+    Button nextBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +31,8 @@ public class CardViewHorizondal extends AppCompatActivity {
         rightArm = findViewById(R.id.right_arm_cardview);
         leftLeg = findViewById(R.id.left_leg_cardview);
         rightLeg = findViewById(R.id.right_leg_cardview);
+
+        nextBtn = (Button) findViewById(R.id.nextBt);
 
         headPart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +73,39 @@ public class CardViewHorizondal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 rightArm.toggle();
+            }
+        });
+
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent in = new Intent(getApplicationContext(),DragView.class);
+
+                if (headPart.isChecked()){
+                    in.putExtra("headId", R.drawable.head);
+
+                }if (bodyPart.isChecked()){
+                    in.putExtra("bodyId", R.drawable.body);
+
+                }
+                if (leftArm.isChecked()){
+                    in.putExtra("leftaId", R.drawable.left_a);
+
+                }
+                if (rightArm.isChecked()){
+                    in.putExtra("rightaId", R.drawable.right_a);
+
+                }
+                if (leftLeg.isChecked()){
+                    in.putExtra("leftlId", R.drawable.left_l);
+
+                }if (rightLeg.isChecked()){
+                    in.putExtra("rightlId", R.drawable.right_l);
+
+                }
+                startActivity(in);
+
             }
         });
     }

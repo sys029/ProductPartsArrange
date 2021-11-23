@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),ItemScrollView.class);
+                Intent i = new Intent(getApplicationContext(),CardViewHorizondal.class);
                 startActivity(i);
 
             }

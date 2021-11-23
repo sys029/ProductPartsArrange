@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.bibox.HelperClass.AdapterParts;
 import com.example.bibox.HelperClass.PartsHelper;
@@ -29,6 +30,8 @@ public class ItemScrollView extends AppCompatActivity implements AdapterParts.Li
         partsRecycler();
 
         continueBt = findViewById(R.id.continueButton);
+
+
 
         continueBt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +67,8 @@ public class ItemScrollView extends AppCompatActivity implements AdapterParts.Li
 
     @Override
     public void onPartsListClick(int clickedItemIndex) {
+
+
 
 
     }

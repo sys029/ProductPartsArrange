@@ -19,12 +19,13 @@
 
     <Button
         android:layout_marginTop="25dp"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="25dp"
-
+        android:backgroundTint="@color/purple_700"
         android:text="START"
+        android:textColor="@color/white"
         android:id="@+id/startButton"
         android:textAlignment="center"
        />
