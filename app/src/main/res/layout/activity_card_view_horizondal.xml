@@ -42,7 +42,7 @@
 
                     android:textAllCaps="true"
                     android:textColor="@color/darkGray"
-                    android:textSize="25dp" />
+                    android:textSize="20dp" />
 
 
 
