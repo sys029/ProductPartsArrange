@@ -1,6 +1,7 @@
 package com.example.bibox;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -13,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView previewImageView;
     Drawable drawable;
-    Button startButton;
+    AppCompatButton startButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

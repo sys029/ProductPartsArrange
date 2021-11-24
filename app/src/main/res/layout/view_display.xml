@@ -3,13 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <com.example.bibox.display
+        android:id="@+id/paintDisplay"
         android:background="@drawable/robo"
-
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
 
+
+
     </com.example.bibox.display>
+
+
 
 
 

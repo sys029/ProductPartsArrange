@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@color/white"
     android:gravity="center"
-
+    android:id="@+id/cardViewParent"
     tools:context=".MainActivity">
 
 
@@ -38,10 +38,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
-                    android:text="SELECT PARTS"
+                    android:text="Select Parts"
+
                     android:textAllCaps="true"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
+                    android:textColor="@color/darkGray"
+                    android:textSize="25dp" />
 
 
 
@@ -87,7 +88,6 @@
                                 android:src="@drawable/head" />
 
                             <TextView
-                                android:textColor="@color/black"
                                 android:id="@+id/part_title"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -97,6 +97,7 @@
                                 android:layout_marginEnd="24dp"
                                 android:layout_marginBottom="80dp"
                                 android:text="Head"
+                                android:textColor="@color/darkGray"
                                 android:textSize="25sp" />
 
 
@@ -139,7 +140,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_marginStart="-6dp"
                                 android:text="Body"
-                                android:textColor="@color/black"
+                                android:textColor="@color/darkGray"
                                 android:layout_marginEnd="24dp"
                                 android:layout_marginBottom="80dp"
                                 android:textSize="25sp" />
@@ -184,7 +185,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_marginStart="-6dp"
                                 android:text="Left Arm"
-                                android:textColor="@color/black"
+                                android:textColor="@color/darkGray"
                                 android:layout_marginEnd="24dp"
                                 android:layout_marginBottom="80dp"
                                 android:textSize="25sp" />
@@ -229,7 +230,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_marginStart="-6dp"
                                 android:text="Right Arm"
-                                android:textColor="@color/black"
+                                android:textColor="@color/darkGray"
                                 android:layout_marginEnd="24dp"
                                 android:layout_marginBottom="80dp"
                                 android:textSize="25sp" />
@@ -274,7 +275,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_marginStart="-6dp"
                                 android:text="Left Leg"
-                                android:textColor="@color/black"
+                                android:textColor="@color/darkGray"
                                 android:layout_marginEnd="24dp"
                                 android:layout_marginBottom="80dp"
                                 android:textSize="25sp" />
@@ -319,7 +320,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_marginStart="-6dp"
                                 android:text="Right Leg"
-                                android:textColor="@color/black"
+                                android:textColor="@color/darkGray"
                                 android:layout_marginEnd="24dp"
                                 android:layout_marginBottom="80dp"
                                 android:textSize="25sp" />
@@ -334,15 +335,16 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
-            <Button
-                android:layout_marginTop="30dp"
-                android:text="NEXT"
-                android:backgroundTint="@color/purple_700"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginTop="70dp"
+                android:text="Let's Get Creative"
+                android:background="@drawable/rounded_button"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
                 android:textColor="@color/white"
                 android:id="@+id/nextBt"
-                android:textSize="20dp"
+                android:textAllCaps="false"
+                android:textSize="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"/>

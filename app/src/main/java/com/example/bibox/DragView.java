@@ -2,8 +2,12 @@ package com.example.bibox;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,10 +15,12 @@ import android.widget.ImageView;
 
 import com.google.android.material.card.MaterialCardView;
 
+import java.io.ByteArrayOutputStream;
+
 public class DragView extends AppCompatActivity {
 
     DraggableCoordinatorLayout parentLayout;
-    Button dragviewButton;
+    AppCompatButton dragviewButton;
     MaterialCardView draggableCard1,draggableCard2,draggableCard3,draggableCard4,draggableCard5,draggableCard6;
 
     ImageView bodyImg,headImg,leftlImg,rightlImg,leftaImg,rightaImg;
@@ -78,8 +84,24 @@ public class DragView extends AppCompatActivity {
         dragviewButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),PaintActivity.class);
-                startActivity(i);
+
+                View contentView = getWindow().getDecorView().findViewById(R.id.parentCoordinatorLayout);
+                contentView.setDrawingCacheEnabled(true);
+                contentView.buildDrawingCache();
+                Bitmap drawingCache = contentView.getDrawingCache();
+
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                drawingCache.compress(Bitmap.CompressFormat.PNG, 100, baos);
+                byte[] b = baos.toByteArray();
+
+                Intent intent = new Intent(getApplicationContext(), PaintActivity.class);
+                intent.putExtra("picture", b);
+                startActivity(intent);
+
+
+//                Intent i = new Intent(getApplicationContext(),PaintActivity.class);
+//                i.put
+//                startActivity(i);
             }
         });
 
